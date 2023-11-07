@@ -1,4 +1,4 @@
-## Sandbox 
+## Sandbox account provisioing
 module "sandbox" {
   source = "./modules/aft-account-request"
 
@@ -10,9 +10,10 @@ module "sandbox" {
     SSOUserFirstName          = "Sandbox"
     SSOUserLastName           = "AFT"
   }
-
+## Account tags to be added here
   account_tags = {
-    "Learn Tutorial" = "AFT"
+    "Application" = "sandbox"
+    "Env"="POC"
   }
 
   change_management_parameters = {
@@ -24,10 +25,10 @@ module "sandbox" {
     group = "non-prod"
   }
 
-  account_customizations_name = "sandbox"
+  account_customizations_name = "sandbox-account-customization"
 }
 
-## Sandbox1
+## Sandbox1  account provisioing
 module "sandbox1" {
   source = "./modules/aft-account-request"
 
@@ -40,8 +41,10 @@ module "sandbox1" {
     SSOUserLastName           = "AFT"
   }
 
+## Account tags to be added here
   account_tags = {
-    "Learn Tutorial" = "AFT"
+    "Application" = "sandbox1"
+    "Env"="POC"
   }
 
   change_management_parameters = {
@@ -53,5 +56,6 @@ module "sandbox1" {
     group = "non-prod"
   }
 
-  account_customizations_name = "sandbox"
+  account_customizations_name = "sandbox1-account-customization"
 }
+
